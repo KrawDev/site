@@ -1,0 +1,187 @@
+body {
+      margin: 0;
+      background-color: #c1e5ff;
+      font-family: "Inter", sans-serif;
+      color: white;
+}
+
+.navbar {
+  background-color: #d9ecfa;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left h1 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: bolder;
+  text-shadow:
+    -1px -1px 0 #1A1C1E,
+    1px -1px 0 #1A1C1E,
+    -2px  2px 0 #1A1C1E,
+    1px  1px 0 #1A1C1E;
+}
+
+.navbar-left p {
+  margin: 4px 0 0 0;
+  font-size: 20px;
+  color: #1A1C1E;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.navbar-right p {
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #1A1C1E;
+}
+
+.kraw-logo{
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+
+
+.copy-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  padding-left: 10px;
+}
+
+.copy-btn:hover {
+  color: #000;
+}
+
+.cloud-container {
+  background-color: #e8f5ff;
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 24px;
+  text-align: center;
+}
+
+.cloud-item {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.cloud-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px; /* optional, just for aesthetics */
+}
+
+.cloud-item p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1A1C1E;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-right.show {
+    display: flex;
+  }
+
+  .navbar-right p {
+    font-size: 16px;
+    color: black;
+    padding: 4px 0;
+  }
+
+  .navbar-left h1 {
+    font-size: 32px;
+  }
+
+  .navbar-left p {
+    font-size: 16px;
+  }
+
+  .cloud-item {
+    width: 70px;
+  }
+
+  .cloud-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cloud-item p {
+    font-size: 12px;
+  }
+
+  .cloud-container {
+    gap: 16px;
+    padding: 16px;
+  }
+
+}

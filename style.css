@@ -63,12 +63,20 @@ body {
   font-size: 100px;
   margin-top: 20px;
   margin-bottom: 0;
+  color: black;
 }
 
 .sub-heading {
   text-align: center;
   font-size: 50px;
   margin-top: 5px;
+  color: black;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 25px;
+  color: black;
 }
 
 
@@ -84,6 +92,14 @@ body {
 
 .copy-btn:hover {
   color: #000;
+}
+
+.cloud-section {
+  background-color: #c1e5ff;
+  background-image: url('assets/landscape.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
 .cloud-container {
@@ -111,7 +127,7 @@ body {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 12px; /* optional, just for aesthetics */
+  border-radius: 12px;
 }
 
 .cloud-item p {
@@ -119,6 +135,172 @@ body {
   font-weight: bold;
   font-size: 14px;
   color: #333;
+}
+
+.land-section {
+  background-color: #c1e5ff;
+  background-image: url('assets/landscape.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 800px;
+}
+
+.hero-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contract-card {
+  border: 2px solid #e0c3fc;
+}
+
+.contract-card .card-icon {
+  color: #8a2be2;
+}
+
+.contract-card .card-title {
+  color: #8a2be2;
+}
+
+.contract-card .address {
+  font-size: 0.9em;
+  color: #4682b4;
+  word-break: break-all;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.contract-card .copy-button {
+  background-color: #f0e6fa;
+  color: #8a2be2;
+  border: 1px solid #8a2be2;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.contract-card .copy-button:hover {
+  background-color: #8a2be2;
+  color: #fff;
+}
+
+.buy-kraw-card {
+  border: 2px solid #a8dadc;
+}
+
+.buy-kraw-card .card-icon {
+  color: #ffd700;
+}
+
+.buy-kraw-card .card-title {
+  color: #4682b4;
+}
+
+.buy-kraw-card .button-group button {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.buy-kraw-card .button-group button:last-child {
+  margin-bottom: 0;
+}
+
+.buy-kraw-card .button-group button:hover {
+  transform: translateY(-2px);
+}
+
+.buy-kraw-card .fetaswap-button {
+  background-color: #9370db;
+  color: #fff;
+}
+
+.buy-kraw-card .quicksnap-button {
+  background-color: #e0f2f7;
+  color: #4682b4;
+}
+
+.warning-card {
+  border: 2px solid #ff6347;
+}
+
+.warning-card .card-icon {
+  color: #ffd700;
+}
+
+.warning-card .card-title {
+  color: #ff6347;
+}
+
+.warning-card p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.warning-card .dev-might-rug {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.external-link-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.copy-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {

@@ -303,6 +303,39 @@ body {
   vertical-align: middle;
 }
 
+.underground-section {
+  background-color: #c1e5ff;
+  background-image: url('assets/underground.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 800px;
+}
+
+.about-sub-heading {
+  margin-top: 60px;
+}
+
+.about-container {
+  background-color: rgba(0, 0, 0, 0.4);;
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+}
+
+.about-text span {
+  color: #f60195;
+}
+
+.about-img img {
+  width: 100px;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

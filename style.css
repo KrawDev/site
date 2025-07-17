@@ -336,6 +336,72 @@ body {
   width: 100px;
 }
 
+.tokenomics-section h2 {
+  color: #b266ff;
+  font-size: 2rem;
+}
+
+.tokenomics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Donut chart */
+.donut-chart {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff6f91 0% 50%,    /* Burn: 50% */
+    #9d65ff 50% 90%,   /* Liquidity: 40% */
+    #66d9ef 90% 100%   /* Marketing: 10% */
+  );
+  border: 5px solid gold;
+}
+
+/* Info boxes */
+.token-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-width: 180px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.pink {
+  background-color: #ff6f91;
+  color: white;
+}
+
+.purple {
+  background-color: #9d65ff;
+  color: white;
+}
+
+.blue {
+  background-color: #66d9ef;
+  color: black;
+}
+
+.quote {
+  color: gold;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -398,5 +464,23 @@ body {
     gap: 16px;
     padding: 16px;
   }
+
+  .tokenomics-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .tokenomics-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .donut-chart {
+    width: 220px;
+    height: 220px;
+  }
+
 
 }

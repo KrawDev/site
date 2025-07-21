@@ -350,20 +350,19 @@ body {
   margin-top: 20px;
 }
 
-/* Donut chart */
+
 .donut-chart {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   background: conic-gradient(
-    #ff6f91 0% 50%,    /* Burn: 50% */
-    #9d65ff 50% 90%,   /* Liquidity: 40% */
-    #66d9ef 90% 100%   /* Marketing: 10% */
+    #ff6f91 0% 50%,
+    #9d65ff 50% 90%,
+    #66d9ef 90% 100%
   );
   border: 5px solid gold;
 }
 
-/* Info boxes */
 .token-info {
   display: flex;
   flex-direction: column;
@@ -470,6 +469,38 @@ body {
 }
 
 
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.chart-wrapper {
+  width: 90%;
+  max-width: 900px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.dexscreener-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dexscreener-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 @media (max-width: 768px) {
   .navbar {

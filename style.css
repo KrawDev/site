@@ -591,5 +591,22 @@ body {
     width: 90%;
   }
 
+  .page {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: none;
+  }
+
+  .dexscreener-embed {
+    padding-bottom: 100%;
+    border-radius: 8px;
+  }
+
 
 }

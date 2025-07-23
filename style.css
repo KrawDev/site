@@ -502,6 +502,64 @@ body {
   border: 0;
 }
 
+.converter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  margin-top: 50px;
+}
+
+.kraw-usd-converter {
+  color: #ffffff;
+}
+
+.converter-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
+
+.converter-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.converter-field label {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.converter-field input {
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-align: right;
+  font-size: 16px;
+  width: 160px;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.converter-field input::-webkit-outer-spin-button,
+.converter-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.converter-field input:focus {
+  outline: none;
+}
+
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

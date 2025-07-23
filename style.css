@@ -150,6 +150,12 @@ body {
   height: 60px;
   object-fit: cover;
   border-radius: 12px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.cloud-item img:hover {
+  transform: scale(1.1);
 }
 
 .cloud-item p {
@@ -252,12 +258,13 @@ body {
   color: #4682b4;
 }
 
-.buy-kraw-card .button-group button {
+.buy-kraw-card .button-group a {
   width: 100%;
   padding: 12px 20px;
   border-radius: 25px;
   border: none;
   font-weight: 600;
+  margin-top: 10px;
   margin-bottom: 15px;
   cursor: pointer;
   display: flex;
@@ -265,22 +272,24 @@ body {
   align-items: center;
   gap: 8px;
   transition: transform 0.2s;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-.buy-kraw-card .button-group button:last-child {
+.buy-kraw-card .button-group a:last-child {
   margin-bottom: 0;
 }
 
-.buy-kraw-card .button-group button:hover {
+.buy-kraw-card .button-group a:hover {
   transform: translateY(-2px);
 }
 
-.buy-kraw-card .fetaswap-button {
+.buy-kraw-card .quickswap-button {
   background-color: #9370db;
   color: #fff;
 }
 
-.buy-kraw-card .quicksnap-button {
+.buy-kraw-card .wenmarkets-button {
   background-color: #e0f2f7;
   color: #4682b4;
 }

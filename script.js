@@ -6,3 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarRight.classList.toggle("show");
   });
 });
+
+function copyContractAddress(button) {
+  const address = document.getElementById("contract-address").innerText;
+
+  navigator.clipboard.writeText(address).then(() => {
+    const originalHTML = button.innerHTML;
+    button.innerHTML = 'Copied!';
+    button.disabled = true;
+
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.disabled = false;
+    }, 1500);
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}

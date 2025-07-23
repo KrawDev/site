@@ -100,6 +100,16 @@ body {
   border-radius: 2px;
 }
 
+.section-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff0e1;
+  text-shadow: 2px 2px 6px #8a4b22;
+  letter-spacing: 1.5px;
+
+}
+
 .tagline {
   text-align: center;
   font-size: 1.25rem;
@@ -355,7 +365,7 @@ body {
 }
 
 .about-container {
-  background-color: rgba(0, 0, 0, 0.4);;
+  background-color: rgba(0, 0, 0, 0.7);;
   max-width: 800px;
   margin: 50px auto;
   border-radius: 20px;
@@ -363,6 +373,10 @@ body {
   text-align: center;
   border: 2px solid white;
   color: white;
+}
+
+.about-container p {
+  text-align: left;
 }
 
 .about-text span {
@@ -373,9 +387,22 @@ body {
   width: 100px;
 }
 
-.tokenomics-section h2 {
-  color: #b266ff;
+.join-us-about {
+  color: #ffe500;
+  font-weight: bold;
   font-size: 2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.discord-invite {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.discord-invite:hover {
+   transform: scale(1.1);
 }
 
 .tokenomics-container {
@@ -432,7 +459,7 @@ body {
 }
 
 .quote {
-  color: white;
+  color: black;
   font-weight: bold;
   font-style: italic;
   margin-top: 20px;
@@ -519,7 +546,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 .chart-wrapper {
@@ -552,8 +579,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 30vh;
-  margin-top: 50px;
+  min-height: 20vh;
+  margin-top: 20px;
 }
 
 .kraw-usd-converter {
@@ -563,7 +590,7 @@ body {
 .converter-title {
   font-size: 16px;
   margin-bottom: 20px;
-  color: black;
+  color: white;
   text-align: center;
 }
 

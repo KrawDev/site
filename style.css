@@ -632,6 +632,16 @@ body {
   outline: none;
 }
 
+.hell-bg {
+  background-color: #c1e5ff;
+  background-image: url('assets/hell-new.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 800px;
+}
+
 
 @media (max-width: 768px) {
   .navbar {

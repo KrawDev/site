@@ -328,16 +328,29 @@ body {
   line-height: 1.5;
 }
 
-.warning-card .dev-might-rug {
+.warning-card .whitepaper {
   background-color: #ff6347;
   color: #fff;
   padding: 8px 15px;
   border-radius: 20px;
   font-weight: 600;
   display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.warning-card .whitepaper:hover {
+  transform: translateY(-2px);
 }
 
 .external-link-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.downloads-icon {
   width: 16px;
   height: 16px;
   vertical-align: middle;
@@ -752,6 +765,10 @@ body {
   filter: brightness(1.2);
 }
 
+.socials-item a {
+  text-decoration: none;
+}
+
 .socials-img {
   width: 72px;
   height: 72px;
@@ -762,6 +779,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
+  color: white;
 }
 
 .kraw-footer {
@@ -822,6 +840,80 @@ body {
   color: #444;
 }
 
+.testimonials-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.testimonials-item {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #eee;
+  transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.testimonials-item:hover {
+  background: #292929;
+}
+
+.testimonials-stars {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonials-stars .filled {
+  color: gold;
+  margin-right: 2px;
+}
+
+.testimonials {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #ccc;
+}
+
+.testimonials-author {
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: #ffcc00;
+  text-align: left;
+  letter-spacing: 0.05em;
+}
+
+.ihearddev {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.ihearddev a {
+  color: gold;
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px gold, 0 0 10px magenta, 0 0 15px purple;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px magenta;
+  }
+  to {
+    text-shadow: 0 0 20px magenta, 0 0 30px purple;
+  }
+}
 
 
 @media (max-width: 768px) {

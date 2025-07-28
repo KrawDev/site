@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // === Mobile Menu Toggle ===
-  const menuIcon = document.querySelector(".menu-icon");
-  const navbarRight = document.getElementById("navbar-right");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("nav");
 
-  if (menuIcon && navbarRight) {
-    menuIcon.addEventListener("click", () => {
-      navbarRight.classList.toggle("show");
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
     });
   }
 

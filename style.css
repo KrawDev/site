@@ -5,7 +5,7 @@ body {
       color: white;
 }
 
-.navbar {
+.header {
   background-color: #d9ecfa;
   padding: 16px 24px;
   display: flex;
@@ -14,7 +14,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-left h1 {
+.brand h1 {
   margin: 0;
   color: #FFFFFF;
   font-size: 40px;
@@ -26,20 +26,32 @@ body {
     1px  1px 0 #1A1C1E;
 }
 
-.navbar-left p {
+.brand p {
   margin: 4px 0 0 0;
   font-size: 20px;
   color: #1A1C1E;
   font-weight: bold;
 }
 
-.navbar-right {
+.nav {
   display: flex;
   align-items: center;
   gap: 20px; 
 }
 
-.navbar-right a {
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
   color: black;
   font-weight: 600;
   cursor: pointer;
@@ -49,11 +61,11 @@ body {
   text-decoration: none;
 }
 
-.navbar-right a:hover {
+.nav-list a:hover {
   background-color: rgba(0, 0, 0, 0.07);
 }
 
-.menu-icon {
+.menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
@@ -917,47 +929,63 @@ body {
 
 
 @media (max-width: 768px) {
-  .navbar {
+  .header {
     flex-direction: column;
     align-items: stretch;
     padding: 16px;
   }
 
-  .navbar-top {
+  .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .menu-icon {
+  .menu-toggle {
+    border: none;
+    background-color: transparent;
     display: block;
     font-size: 28px;
     cursor: pointer;
     color: #1A1C1E;
   }
 
-  .navbar-right {
+  .nav {
     display: none;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 25px;
   }
 
-  .navbar-right.show {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    width: 100%;
+  }
+
+  .nav.show {
     display: flex;
   }
 
-  .navbar-right p {
+  .nav-list a {
     font-size: 16px;
     color: black;
     padding: 4px 0;
   }
 
-  .navbar-left h1 {
+  .brand h1 {
     font-size: 32px;
   }
 
-  .navbar-left p {
+  .brand p {
     font-size: 16px;
   }
 

@@ -14,7 +14,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.brand h1 {
+.site-title {
   margin: 0;
   color: #FFFFFF;
   font-size: 40px;
@@ -26,7 +26,7 @@ body {
     1px  1px 0 #1A1C1E;
 }
 
-.brand p {
+.site-tagline {
   margin: 4px 0 0 0;
   font-size: 20px;
   color: #1A1C1E;
@@ -72,7 +72,69 @@ body {
   color: #1A1C1E;
 }
 
-.kraw-logo{
+.hero-section {
+  background-color: #c1e5ff;
+  background-image: url('assets/landscape-new.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 20px;
+  min-height: 800px;
+}
+
+.quick-access-bar {
+  background-color: #e8f5ff;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.quick-access-bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 16px;
+}
+
+.quick-access-item {
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-access-icon {
+  width: 60px;
+  height: 60px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.quick-access-icon:hover {
+  transform: scale(1.1);
+}
+
+.quick-access-label {
+  margin-top: 8px;
+  font-weight: bold;  
+  font-size: 12px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.quick-access-link {
+  text-decoration: none;
+}
+
+.hero-logo{
   width: 100px;
   display: block;
   margin-left: auto;
@@ -80,7 +142,7 @@ body {
   margin-top: 50px;
 }
 
-.heading {
+.hero-title {
   text-align: center;
   font-size: 4.5rem;
   margin-top: 20px;
@@ -92,7 +154,7 @@ body {
     0 0 8px rgba(0,0,0,0.2);
 }
 
-.sub-heading {
+.hero-subtitle {
   text-align: center;
   font-size: 2.5rem;
   color: #333;
@@ -102,7 +164,7 @@ body {
   margin-bottom: 20px;
 }
 
-.sub-heading::after {
+.hero-subtitle::after {
   content: '';
   display: block;
   width: 80px;
@@ -112,17 +174,7 @@ body {
   border-radius: 2px;
 }
 
-.section-heading {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff0e1;
-  text-shadow: 2px 2px 6px #8a4b22;
-  letter-spacing: 1.5px;
-
-}
-
-.tagline {
+.hero-tagline {
   text-align: center;
   font-size: 1.25rem;
   color: #000;
@@ -134,83 +186,14 @@ body {
   opacity: 0.9;
 }
 
-
-.copy-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #555;
-  padding-left: 10px;
-}
-
-.copy-btn:hover {
-  color: #000;
-}
-
-.cloud-container {
-  background-color: #e8f5ff;
-  max-width: 800px;
-  margin: 20px auto;
-  border-radius: 20px;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 12px;
-  text-align: center;
-}
-
-.cloud-item {
-  width: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cloud-item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.cloud-item img:hover {
-  transform: scale(1.1);
-}
-
-.cloud-item p {
-  margin-top: 8px;
-  font-weight: bold;  
-  font-size: 12px;
-  color: #333;
-  line-height: 1.2;
-}
-
-.cloud-item a {
-  text-decoration: none;
-}
-
-.land-bg {
-  background-color: #c1e5ff;
-  background-image: url('assets/landscape-new.png');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  padding: 20px;
-  min-height: 800px;
-}
-
-.hero-container {
+.hero-cards {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.card {
+.info-card {
   background-color: #fff;
   border-radius: 15px;
   padding: 30px;
@@ -234,19 +217,19 @@ body {
   margin-bottom: 15px;
 }
 
-.contract-card {
+.contract-info-card {
   border: 2px solid #e0c3fc;
 }
 
-.contract-card .card-icon {
+.contract-info-card .card-icon {
   color: #8a2be2;
 }
 
-.contract-card .card-title {
+.contract-info-card .card-title {
   color: #8a2be2;
 }
 
-.contract-card .address {
+.contract-info-card .contract-address {
   font-size: 0.9em;
   color: #4682b4;
   word-break: break-all;
@@ -254,7 +237,7 @@ body {
   line-height: 1.4;
 }
 
-.contract-card .copy-button {
+.contract-info-card .copy-address-button {
   background-color: #f0e6fa;
   color: #8a2be2;
   border: 1px solid #8a2be2;
@@ -268,24 +251,24 @@ body {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.contract-card .copy-button:hover {
+.contract-info-card .copy-address-button:hover {
   background-color: #8a2be2;
   color: #fff;
 }
 
-.buy-kraw-card {
+.buy-info-card {
   border: 2px solid #a8dadc;
 }
 
-.buy-kraw-card .card-icon {
+.buy-info-card .card-icon {
   color: #ffd700;
 }
 
-.buy-kraw-card .card-title {
+.buy-info-card .card-title {
   color: #4682b4;
 }
 
-.buy-kraw-card .button-group a {
+.buy-info-card .buy-button-group a {
   width: 100%;
   padding: 12px 20px;
   border-radius: 25px;
@@ -303,44 +286,44 @@ body {
   box-sizing: border-box;
 }
 
-.buy-kraw-card .button-group a:last-child {
+.buy-info-card .buy-button-group a:last-child {
   margin-bottom: 0;
 }
 
-.buy-kraw-card .button-group a:hover {
+.buy-info-card .buy-button-group a:hover {
   transform: translateY(-2px);
 }
 
-.buy-kraw-card .quickswap-button {
+.buy-info-card .buy-button-quickswap {
   background-color: #9370db;
   color: #fff;
 }
 
-.buy-kraw-card .wenmarkets-button {
+.buy-info-card .buy-button-wenmarkets {
   background-color: #e0f2f7;
   color: #4682b4;
 }
 
-.warning-card {
+.warning-info-card {
   border: 2px solid #ff6347;
 }
 
-.warning-card .card-icon {
+.warning-info-card .card-icon {
   color: #ffd700;
 }
 
-.warning-card .card-title {
+.warning-info-card .card-title {
   color: #ff6347;
 }
 
-.warning-card p {
+.warning-info-card p {
   font-size: 1.1em;
   color: #333;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-.warning-card .whitepaper {
+.warning-info-card .whitepaper-download {
   background-color: #ff6347;
   color: #fff;
   padding: 8px 15px;
@@ -351,8 +334,15 @@ body {
   transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
-.warning-card .whitepaper:hover {
+.warning-info-card .whitepaper-download:hover {
   transform: translateY(-2px);
+}
+
+.copy-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .external-link-icon {
@@ -366,13 +356,7 @@ body {
   width: 16px;
   height: 16px;
   vertical-align: middle;
-  margin-left: 5px;
-}
-
-.copy-icon {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .underground-bg {
@@ -383,6 +367,16 @@ body {
   background-repeat: no-repeat;
   padding: 20px;
   min-height: 800px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff0e1;
+  text-shadow: 2px 2px 6px #8a4b22;
+  letter-spacing: 1.5px;
+
 }
 
 .about-sub-heading {
@@ -981,29 +975,15 @@ body {
     padding: 4px 0;
   }
 
-  .brand h1 {
+  .site-title {
     font-size: 32px;
   }
 
-  .brand p {
+  .site-tagline {
     font-size: 16px;
   }
 
-  .cloud-item {
-    width: 70px;
-  }
-
-  .cloud-item img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .cloud-item p {
-    font-size: 12px;
-  }
-
-  .cloud-container {
-    gap: 16px;
+  .quick-access-bar {
     padding: 16px;
   }
 

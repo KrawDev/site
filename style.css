@@ -359,7 +359,7 @@ body {
   margin-right: 5px;
 }
 
-.underground-bg {
+.underground-section {
   background-color: #c1e5ff;
   background-image: url('assets/underground1.png');
   background-size: cover;
@@ -379,10 +379,6 @@ body {
 
 }
 
-.about-sub-heading {
-  margin-top: 60px;
-}
-
 .about-container {
   background-color: rgba(0, 0, 0, 0.7);;
   max-width: 800px;
@@ -394,19 +390,19 @@ body {
   color: white;
 }
 
-.about-container p {
-  text-align: left;
-}
-
-.about-text span {
-  color: #f60195;
-}
-
-.about-img img {
+.about-image img {
   width: 100px;
 }
 
-.join-us-about {
+.about-content p {
+  text-align: left;
+}
+
+.about-content span {
+  color: #f60195;
+}
+
+.about-join-us {
   color: #ffe500;
   font-weight: bold;
   font-size: 2rem;
@@ -415,12 +411,12 @@ body {
   margin-bottom: 6px;
 }
 
-.discord-invite {
+.about-discord-icon {
   width: 200px;
   transition: transform 0.3s ease;
 }
 
-.discord-invite:hover {
+.about-discord-icon:hover {
    transform: scale(1.1);
 }
 
@@ -985,12 +981,6 @@ body {
 
   .quick-access-bar {
     padding: 16px;
-  }
-
-  .tokenomics-container {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
   }
 
   .tokenomics-container {

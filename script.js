@@ -68,4 +68,27 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Failed to copy: ", err);
     });
   };
+
+  // === Roadmap Popup ===
+  const roadmapLink = document.getElementById("roadmap-popup-trigger");
+  const popup = document.getElementById("roadmap-popup");
+  const closeBtn = document.getElementById("close-roadmap-popup");
+
+  if (roadmapLink && popup && closeBtn) {
+    roadmapLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      popup.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function () {
+      popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  }
+
 });

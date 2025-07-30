@@ -1097,5 +1097,18 @@ body {
     border-radius: 8px;
   }
 
+  .popup-container {
+    max-width: 80%;
+    padding: 1.5rem;
+  }
+
+  .popup-message {
+    font-size: 1.1rem;
+  }
+
+  .popup-close-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
 
 }

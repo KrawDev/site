@@ -789,65 +789,6 @@ body {
   color: white;
 }
 
-.site-footer {
-  background-color: #0a0a0a;
-  color: #ddd;
-  text-align: center;
-  padding: 3rem 1rem;
-  font-family: 'Courier New', monospace;
-  border-top: 1px solid #222;
-}
-
-.footer-branding {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.footer-logo {
-  width: 80px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.footer-tagline {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #ff4c4c;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  list-style: none;
-}
-
-.footer-links a {
-  color: #aaa;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #fff;
-}
-
-.footer-meta {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.footer-copyright {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: #444;
-}
-
 .testimonials-wrapper {
   max-width: 1200px;
   margin: 40px auto;
@@ -914,6 +855,75 @@ body {
   color: gold;
   animation: glow 1s ease-in-out infinite alternate;
   text-shadow: 0 0 5px gold, 0 0 10px magenta, 0 0 15px purple;
+}
+
+.site-footer {
+  background-color: #0a0a0a;
+  color: #ddd;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Courier New', monospace;
+  border-top: 1px solid #222;
+}
+
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ff4c4c;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-meta {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.footer-copyright {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #444;
 }
 
 .roadmap-link-button {

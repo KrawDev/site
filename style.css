@@ -430,7 +430,7 @@ body {
 }
 
 
-.donut-chart {
+.tokenomics-donut-chart {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -442,13 +442,13 @@ body {
   border: 5px solid gold;
 }
 
-.token-info {
+.tokenomics-info {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.token-row {
+.tokenomics-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -458,22 +458,22 @@ body {
   font-size: 1rem;
 }
 
-.pink {
+.tokenomics-row-burn {
   background-color: #ff6f91;
   color: white;
 }
 
-.purple {
+.tokenomics-row-liquidity {
   background-color: #9d65ff;
   color: white;
 }
 
-.blue {
+.tokenomics-row-marketing {
   background-color: #66d9ef;
   color: black;
 }
 
-.quote {
+.tokenomics-quote {
   color: black;
   font-weight: bold;
   font-style: italic;
@@ -481,7 +481,7 @@ body {
   text-align: center;
 }
 
-.sea-bg {
+.sea-section {
   background-color: #c1e5ff;
   background-image: url('assets/sea.jpg');
   background-size: cover;
@@ -491,7 +491,7 @@ body {
   min-height: 800px;
 }
 
-.team-container {
+.team-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -500,7 +500,7 @@ body {
   margin: auto;
 }
 
-.team-card {
+.team-member {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: 2px solid white;
@@ -514,11 +514,11 @@ body {
   align-items: center;
 }
 
-.team-card:hover {
+.team-member:hover {
   transform: scale(1.03);
 }
 
-.team-img {
+.member-pfp {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -527,27 +527,27 @@ body {
   margin-bottom: 15px;
 }
 
-.team-card h3 {
+.member-name {
   font-size: 1.5rem;
   color: #f60195;
   margin-bottom: 5px;
 }
 
-.team-card .role {
+.member-role {
   font-style: italic;
   font-weight: 600;
   color: #ffd700;
   margin-bottom: 10px;
 }
 
-.team-card p {
+.member-bio {
   font-size: 0.95rem;
   line-height: 1.4;
   margin: 0 0 10px;
   text-align: center;
 }
 
-.ice-bg {
+.ice-section {
   background-color: #c1e5ff;
   background-image: url('assets/ice.png');
   background-size: cover;
@@ -557,14 +557,14 @@ body {
   min-height: 800px;
 }
 
-.page {
+.chart-layout {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: auto;
 }
 
-.chart-wrapper {
+.chart-embed-card {
   width: 90%;
   max-width: 900px;
   background-color: #1e1e1e;
@@ -573,7 +573,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.dexscreener-embed {
+.dex-iframe-wrapper {
   position: relative;
   width: 100%;
   padding-bottom: 60%;
@@ -581,7 +581,7 @@ body {
   overflow: hidden;
 }
 
-.dexscreener-embed iframe {
+.dex-iframe-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -590,7 +590,7 @@ body {
   border: 0;
 }
 
-.converter-wrapper {
+.price-converter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -598,7 +598,7 @@ body {
   margin-top: 20px;
 }
 
-.kraw-usd-converter {
+.converter-card {
   color: #ffffff;
 }
 
@@ -609,7 +609,7 @@ body {
   text-align: center;
 }
 
-.converter-field {
+.converter-input-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -620,12 +620,12 @@ body {
   margin-bottom: 12px;
 }
 
-.converter-field label {
+.converter-input-field label {
   font-size: 14px;
   color: #8b949e;
 }
 
-.converter-field input {
+.converter-input-field input {
   background: none;
   border: none;
   color: #ffffff;
@@ -637,13 +637,13 @@ body {
   -moz-appearance: textfield;
 }
 
-.converter-field input::-webkit-outer-spin-button,
-.converter-field input::-webkit-inner-spin-button {
+.converter-input-field input::-webkit-outer-spin-button,
+.converter-input-field input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.converter-field input:focus {
+.converter-input-field input:focus {
   outline: none;
 }
 
@@ -989,33 +989,33 @@ body {
     align-items: center;
   }
 
-  .donut-chart {
+  .tokenomics-donut-chart {
     width: 220px;
     height: 220px;
   }
 
-  .team-container {
+  .team-wrapper {
     flex-direction: column;
     align-items: center;
   }
 
-  .team-card {
+  .team-member {
     width: 90%;
   }
 
-  .page {
+  .chart-layout {
     flex-direction: column;
     padding: 20px 10px;
   }
 
-  .chart-wrapper {
+  .chart-embed-card {
     width: 100%;
     padding: 12px;
     border-radius: 12px;
     box-shadow: none;
   }
 
-  .dexscreener-embed {
+  .dex-iframe-wrapper {
     padding-bottom: 100%;
     border-radius: 8px;
   }

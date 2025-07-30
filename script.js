@@ -1,94 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // === KRAW to USD Conversion ===
-  const krawInput = document.getElementById("kraw");
-  const usdInput = document.getElementById("usd");
+  const kraw = document.getElementById("kraw");
+  const usd = document.getElementById("usd");
+  let price = 0;
 
-  let currentPrice = 0;
-
-  function formatValue(value) {
-    return value === 0 ? "0" : value.toFixed(6);
-  }
-
-  async function fetchPrice() {
+  const format = v => (v === 0 ? "0" : v.toFixed(6));
+  const fetchPrice = async () => {
     try {
       const res = await fetch("https://api.dexscreener.com/latest/dex/pairs/polygon/0xd6873ea334088cf847e8fcf964db9246a17df5b2");
-      const data = await res.json();
-      currentPrice = parseFloat(data.pair.priceUsd);
-      console.log("✅ KRAW price (USD):", currentPrice);
-
-      if (krawInput && usdInput) {
-        usdInput.value = formatValue(parseFloat(krawInput.value || 0) * currentPrice);
-      }
+      price = parseFloat((await res.json()).pair.priceUsd);
+      console.log("✅ KRAW price (USD):", price);
+      usd.value = format((parseFloat(kraw.value) || 0) * price);
     } catch (err) {
-      console.error("❌ Failed to fetch price:", err);
+      console.error("❌ Price fetch failed:", err);
     }
-  }
+  };
 
-  if (krawInput && usdInput) {
-    krawInput.addEventListener("input", () => {
-      const kraw = parseFloat(krawInput.value) || 0;
-      usdInput.value = formatValue(kraw * currentPrice);
-    });
-
-    usdInput.addEventListener("input", () => {
-      const usd = parseFloat(usdInput.value) || 0;
-      krawInput.value = formatValue(usd / currentPrice);
-    });
-
+  if (kraw && usd) {
+    kraw.oninput = () => usd.value = format((parseFloat(kraw.value) || 0) * price);
+    usd.oninput = () => kraw.value = format((parseFloat(usd.value) || 0) / price);
     fetchPrice();
     setInterval(fetchPrice, 30000);
-  } else {
-    console.warn("⚠️ KRAW or USD input not found in the HTML.");
   }
 
   // === Mobile Menu Toggle ===
-  const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.getElementById("nav");
-
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
+  document.querySelector(".menu-toggle")?.addEventListener("click", () => {
+    document.getElementById("nav")?.classList.toggle("show");
+  });
 
   // === Copy Contract Address ===
-  window.copyContractAddress = function (button) {
-    const address = document.getElementById("contract-address").innerText;
+  window.copyContractAddress = btn => {
+    const addr = document.getElementById("contract-address")?.innerText;
+    if (!addr) return;
 
-    navigator.clipboard.writeText(address).then(() => {
-      const originalHTML = button.innerHTML;
-      button.innerHTML = 'Copied!';
-      button.disabled = true;
-
+    navigator.clipboard.writeText(addr).then(() => {
+      const oldHTML = btn.innerHTML;
+      btn.innerHTML = "Copied!";
+      btn.disabled = true;
       setTimeout(() => {
-        button.innerHTML = originalHTML;
-        button.disabled = false;
+        btn.innerHTML = oldHTML;
+        btn.disabled = false;
       }, 1500);
-    }).catch(err => {
-      console.error("Failed to copy: ", err);
-    });
+    }).catch(err => console.error("Copy failed:", err));
   };
 
   // === Roadmap Popup ===
-  const roadmapLink = document.getElementById("roadmap-popup-trigger");
   const popup = document.getElementById("roadmap-popup");
-  const closeBtn = document.getElementById("close-roadmap-popup");
-
-  if (roadmapLink && popup && closeBtn) {
-    roadmapLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      popup.style.display = "flex";
-    });
-
-    closeBtn.addEventListener("click", function () {
-      popup.style.display = "none";
-    });
-
-    popup.addEventListener("click", function (e) {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
-    });
-  }
-
+  document.getElementById("roadmap-popup-trigger")?.addEventListener("click", e => {
+    e.preventDefault();
+    popup.style.display = "flex";
+  });
+  document.getElementById("close-roadmap-popup")?.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+  popup?.addEventListener("click", e => {
+    if (e.target === popup) popup.style.display = "none";
+  });
 });

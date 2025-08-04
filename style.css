@@ -74,9 +74,9 @@ body {
 
 .hero-section {
   background-color: #c1e5ff;
-  background-image: url('assets/landscape-new.png');
+  background-image: url('assets/landscape.webp');
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   padding: 20px;
   min-height: 800px;
@@ -361,7 +361,7 @@ body {
 
 .underground-section {
   background-color: #c1e5ff;
-  background-image: url('assets/underground1.png');
+  background-image: url('assets/underground.webp');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -424,66 +424,71 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   flex-wrap: wrap;
   margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
-
 .tokenomics-donut-chart {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   background: conic-gradient(
-    #ff6f91 0% 50%,
-    #9d65ff 50% 90%,
-    #66d9ef 90% 100%
+    #D4AF37 0% 50%,
+    #4682B4 50% 90%,
+    #E97451 90% 100%
   );
-  border: 5px solid gold;
+  border: 2px solid #444;
+  box-shadow: none;
 }
 
 .tokenomics-info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  min-width: 200px;
 }
+
 
 .tokenomics-row {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-radius: 10px;
-  min-width: 180px;
-  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
   font-size: 1rem;
+  background-color: #222;
+  color: black;
 }
 
 .tokenomics-row-burn {
-  background-color: #ff6f91;
-  color: white;
+  background-color: #D4AF37;
+  border: 2px solid #7a6f23;
 }
 
 .tokenomics-row-liquidity {
-  background-color: #9d65ff;
-  color: white;
+  background-color: #4682B4;
+  border: 2px solid #444;
 }
 
 .tokenomics-row-marketing {
-  background-color: #66d9ef;
-  color: black;
+  background-color: #E97451;
+  border: 2px solid #555;
 }
 
 .tokenomics-quote {
   color: black;
-  font-weight: bold;
+  font-weight: 600;
   font-style: italic;
   margin-top: 20px;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .sea-section {
   background-color: #c1e5ff;
-  background-image: url('assets/sea.jpg');
+  background-image: url('assets/sea.webp');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -549,9 +554,9 @@ body {
 
 .ice-section {
   background-color: #c1e5ff;
-  background-image: url('assets/ice.png');
+  background-image: url('assets/ice.webp');
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   padding: 20px;
   min-height: 800px;
@@ -595,7 +600,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 20vh;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .converter-card {
@@ -649,7 +655,7 @@ body {
 
 .hell-section {
   background-color: #c1e5ff;
-  background-image: url('assets/hell-new.jpg');
+  background-image: url('assets/hell.webp');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -727,9 +733,23 @@ body {
   transform: scale(1.05);
 }
 
+.shop {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+   text-shadow: 2px 2px 4px #000000;
+}
+
+.shop a {
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px gold, 0 0 10px purple, 0 0 15px purple;
+}
+
 .universe-section {
   background-color: #c1e5ff;
-  background-image: url('assets/universe.jpg');
+  background-image: url('assets/universe.webp');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -923,6 +943,11 @@ body {
 .footer-copyright {
   margin-top: 0.5rem;
   font-size: 0.75rem;
+  color: #ddd;
+}
+
+.image-credits {
+  text-align: center;
   color: #444;
 }
 
@@ -1078,6 +1103,10 @@ body {
 
   .team-member {
     width: 90%;
+  }
+
+  .ice-section {
+    min-height: 600px;
   }
 
   .chart-layout {

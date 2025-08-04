@@ -56,4 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
   popup?.addEventListener("click", e => {
     if (e.target === popup) popup.style.display = "none";
   });
+
+  // === $KRAW Price ===
+   async function fetchKrawPrice() {
+    try {
+      const response = await fetch('https://api.dexscreener.com/latest/dex/pairs/polygon/0xd6873ea334088cf847e8fcf964db9246a17df5b2');
+      const data = await response.json();
+      const priceUsd = data?.pair?.priceUsd;
+
+      if (priceUsd) {
+        document.getElementById("kraw-price").textContent = `$KRAW Price: $${parseFloat(priceUsd).toFixed(6)} USD`;
+      } else {
+        document.getElementById("kraw-price").textContent = `Price unavailable`;
+      }
+    } catch (error) {
+      console.error("Error fetching $KRAW price:", error);
+      document.getElementById("kraw-price").textContent = `Error loading price`;
+    }
+  }
+
+  fetchKrawPrice();
+  setInterval(fetchKrawPrice, 30000);
 });

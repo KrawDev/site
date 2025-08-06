@@ -58,16 +58,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // === $KRAW Price ===
-   async function fetchKrawPrice() {
+  async function fetchKrawPrice() {
     try {
       const response = await fetch('https://api.dexscreener.com/latest/dex/pairs/polygon/0xd6873ea334088cf847e8fcf964db9246a17df5b2');
       const data = await response.json();
       const priceUsd = data?.pair?.priceUsd;
+      const change24h = data?.pair?.priceChange?.h24;
+
+      const priceDiv = document.getElementById("kraw-price");
 
       if (priceUsd) {
-        document.getElementById("kraw-price").textContent = `$KRAW Price: $${parseFloat(priceUsd).toFixed(6)} USD`;
+        let html = `
+          <div class="price-main">$KRAW Price: <span class="price-value">$${parseFloat(priceUsd).toFixed(6)} USD</span></div>
+        `;
+
+        if (change24h !== undefined && change24h !== null) {
+          const change = parseFloat(change24h).toFixed(2);
+          const isPositive = change > 0;
+          const arrow = isPositive ? '▲' : '▼';
+          const className = isPositive ? 'price-change-up' : 'price-change-down';
+
+          html += `
+            <div class="price-change-wrapper">
+              24h: <span class="${className}">${arrow} ${Math.abs(change)}%</span>
+            </div>
+          `;
+        }
+
+        priceDiv.innerHTML = html;
       } else {
-        document.getElementById("kraw-price").textContent = `Price unavailable`;
+        priceDiv.textContent = `Price unavailable`;
       }
     } catch (error) {
       console.error("Error fetching $KRAW price:", error);

@@ -1143,6 +1143,15 @@ body {
   background: #eee;
 }
 
+#kraw101 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;

@@ -1051,6 +1051,97 @@ body {
   }
 }
 
+.not-easter-egg {
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.nee-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nee-popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.nee-popup p {
+  color: black;
+}
+
+.nee-popup button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nee-popup button:hover {
+  background: #444;
+}
+
+.kraw-101-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.kraw-101-popup {
+  background: #222;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.kraw-101-popup p {
+  font-weight: bolder;
+}
+
+.kraw-101-popup button {
+  margin-top: 15px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+}
+.kraw-101-popup button:hover {
+  background: #eee;
+}
 
 @media (max-width: 768px) {
   .site-header {

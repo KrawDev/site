@@ -501,6 +501,14 @@
     </div>
 
     <p class="ihearddev">Read more reviews at <a href="https://iheard.dev" target="_blank" rel="noopener noreferrer">IHEARD.DEV</a></p>
+    <p class="not-easter-egg">🥚</p>
+
+    <div class="nee-overlay" id="nee-js-popup">
+      <div class="nee-popup">
+        <p>Your dumbass brain might think this is an easter egg, but it's not. Keep searching.</p>
+        <button id="nee-close-btn">Alright</button>
+      </div>
+    </div>
   </section>
 
   <footer class="site-footer">
@@ -522,7 +530,7 @@
 
     <div class="footer-meta">
       <p>deployed on Polygon (for now)</p>
-      <p class="footer-copyright">© 2025 $KRAW. Not financial advice. Probably rug.</p>
+      <p class="footer-copyright">© 2025 <span id="kraw101">$KRAW.</span> Not financial advice. Probably rug.</p>
       <p class="image-credits"><strong>Image credits:</strong> Images designed by brgfx, pikisuperstar, upklyak, and benzoix on <a href="https://www.freepik.com" target="_blank" rel="noopener noreferrer">Freepik</a>. <a href="https://www.vecteezy.com/free-vector/hell" target="_blank" rel="noopener noreferrer">Hell Vectors by Vecteezy</a>, <a href="https://www.vecteezy.com/free-vector/underground-soil" target="_blank" rel="noopener noreferrer">Underground Soil Vectors by Vecteezy</a>.</p>
     </div>
   </footer>
@@ -533,7 +541,15 @@
       <button id="close-roadmap-popup" class="popup-close-btn">Okay fine</button>
     </div>
   </div>
+
+  <div id="kraw101-popup" class="kraw-101-popup-overlay">
+    <div class="kraw-101-popup">
+      <p>🎉Let's go, You found the easter egg🎉</p>
+      <button id="kraw101-btn">Take Screenshot</button>
+    </div>
+  </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js"></script>
 
 </body>

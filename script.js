@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(fetchKrawPrice, 30000);
 
   // === NEE Popup ===
-  const egg = document.querySelector('.not-easter-egg');
+  const egg = document.querySelector('.easter-egg');
   const neepopup = document.getElementById('nee-js-popup');
   const closeBtn = document.getElementById('nee-close-btn');
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   kraw101.addEventListener('mouseenter', () => {
     hoverTimer = setTimeout(() => {
-      kraw101Popup.style.display = 'block';
+      kraw101Popup.style.display = 'flex';
     }, 5000);
   });
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tapTimer = setTimeout(() => { tapCount = 0; }, 1000);
 
     if (tapCount === 3) {
-      kraw101Popup.style.display = 'block';
+      kraw101Popup.style.display = 'flex';
       tapCount = 0;
     }
   });

@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tapTimer = setTimeout(() => { tapCount = 0; }, 1000);
 
-    if (tapCount === 5) {
+    if (tapCount === 3) {
       kraw101Popup.style.display = 'block';
       tapCount = 0;
     }

@@ -97,4 +97,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchKrawPrice();
   setInterval(fetchKrawPrice, 30000);
+
+  // === NEE Popup ===
+  const egg = document.querySelector('.easter-egg');
+  const neepopup = document.getElementById('nee-js-popup');
+  const closeBtn = document.getElementById('nee-close-btn');
+
+  egg.addEventListener('click', () => {
+    neepopup.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    neepopup.style.display = 'none';
+  });
+
+  // === KRAW 101 ===
+  const kraw101 = document.getElementById('kraw101');
+  const kraw101Popup = document.getElementById('kraw101-popup');
+  const kraw101Btn = document.getElementById('kraw101-btn');
+  let hoverTimer;
+
+  kraw101.addEventListener('mouseenter', () => {
+    hoverTimer = setTimeout(() => {
+      kraw101Popup.style.display = 'flex';
+    }, 5000);
+  });
+
+  kraw101.addEventListener('mouseleave', () => {
+    clearTimeout(hoverTimer);
+  });
+
+  let tapCount = 0;
+  let tapTimer;
+
+  kraw101.addEventListener('click', () => {
+    tapCount++;
+    clearTimeout(tapTimer);
+
+    tapTimer = setTimeout(() => { tapCount = 0; }, 1000);
+
+    if (tapCount === 3) {
+      kraw101Popup.style.display = 'flex';
+      tapCount = 0;
+    }
+  });
+
+  kraw101Btn.addEventListener('click', () => {
+    html2canvas(document.body, {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      x: window.scrollX,
+      y: window.scrollY,
+      windowWidth: document.documentElement.clientWidth,
+      windowHeight: document.documentElement.clientHeight
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'kraw-easter-egg.png';
+      link.href = canvas.toDataURL();
+      link.click();
+
+      kraw101Popup.style.display = 'none';
+    });
+  });
+
+    kraw101Popup.addEventListener('click', (e) => {
+    if (e.target === kraw101Popup) {
+      kraw101Popup.style.display = 'none';
+    }
+  });
+
 });
